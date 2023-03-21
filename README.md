@@ -1,6 +1,6 @@
 # microcms
 
-## practice
+## question
 
 練習用です。
 勉強会では主にこちらを使用します。

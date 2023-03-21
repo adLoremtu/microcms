@@ -2,7 +2,7 @@ import { client } from "./microcms";
 import { getTodo } from "./getTodo";
 
 // APIにてデータ削除
-export const deleteApi = (id) => {
+export const deleteTodo = (id) => {
   client
     .delete({
       endpoint: "todos",
