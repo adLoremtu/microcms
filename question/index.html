@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Todo Application - question</title>
+</head>
+
+<body>
+  <div id="app" class="todo-list">
+    <h2>Todo List</h2>
+    <div class="add-task">
+      <input type="text" name="input" placeholder="Add task...">
+      <button class="add">Add</button>
+    </div>
+    <div class="tasks-container">
+      <div class="current-tasks">
+        <h3>Current Tasks</h3>
+        <ul class="current-list">
+        </ul>
+      </div>
+      <div class="completed-tasks">
+        <h3>Completed Tasks</h3>
+        <ul class="complete-list">
+        </ul>
+      </div>
+    </div>
+    <template class="template">
+      <li>
+        <div>
+          <p>taskの中身を表示</p>
+          <p>optionalの中身を表示</p>
+        </div>
+        <button>Currentの場合は「Finish」, Completedの場合は「Delete」</button>
+      </li>
+    </template>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
