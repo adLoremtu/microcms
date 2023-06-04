@@ -1,5 +1,3 @@
-import { workTemplate, finishesTemplate } from "./template";
-
 // APIからtodo一覧を取得して画面に反映
 export const getTodoThenFunction = (res) => {
   const { contents } = res;
