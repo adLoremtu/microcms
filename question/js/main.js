@@ -21,6 +21,20 @@ const addTodo = (text, optional) => {
   alert("Addボタンが押されました。");
 };
 
+// =======================
+// === APIでデータを更新 ===
+// =======================
+const updateTodo = (id) => {
+  alert("Finishボタンが押されました。");
+};
+
+// =======================
+// === APIでデータを削除 ===
+// =======================
+const deleteTodo = (id) => {
+  alert("Deleteボタンが押されました。");
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   // 一覧取得
   getTodo();
@@ -37,18 +51,17 @@ document.addEventListener("DOMContentLoaded", () => {
         "input[name=input-optional]"
       ).value;
       if (task === "") return;
+
       addTodo(task, optional);
     }
 
     // 更新
     else if (classList.contains("finish")) {
-      alert("更新");
       updateTodo(id);
     }
 
     // 削除
     else if (classList.contains("delete")) {
-      alert("削除");
       deleteTodo(id);
     }
   });

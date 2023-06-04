@@ -5,14 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css">
-  <title>Todo Application - question</title>
+  <title>Todo Application - answer</title>
 </head>
 
 <body>
   <div id="app" class="todo-list">
     <h2>Todo List</h2>
     <div class="add-task">
-      <input type="text" name="input" placeholder="Add task...">
+      <input type="text" name="input-task" placeholder="Add task...">
+      <input type="number" name="input-optional" placeholder="Add optional...">
       <button class="add">Add</button>
     </div>
     <div class="tasks-container">
@@ -30,8 +31,8 @@
     <template class="template">
       <li>
         <div>
-          <p>taskの中身を表示</p>
-          <p>optionalの中身を表示</p>
+          <p class="task">taskの中身を表示</p>
+          <p class="optional">optionalの中身を表示</p>
         </div>
         <button>Currentの場合は「Finish」, Completedの場合は「Delete」</button>
       </li>

@@ -57,6 +57,47 @@ const addTodo = (task, optional) => {
     });
 };
 
+// =======================
+// === APIでデータを更新 ===
+// =======================
+const updateTodo = (id) => {
+  client
+    .update({
+      endpoint: "todos",
+      contentId: id,
+      content: {
+        completeFlag: true,
+      },
+    })
+    .then(() => {
+      alert("todoタスクの更新に成功しました。");
+      getTodo();
+    })
+    .catch((err) => {
+      alert("todoタスクの更新に失敗しました。");
+      console.log(err);
+    });
+};
+
+// =======================
+// === APIでデータを削除 ===
+// =======================
+const deleteTodo = (id) => {
+  client
+    .delete({
+      endpoint: "todos",
+      contentId: id,
+    })
+    .then(() => {
+      alert("todoタスクの削除に成功しました。");
+      getTodo();
+    })
+    .catch((err) => {
+      alert("todoタスクの削除に失敗しました。");
+      console.log(err);
+    });
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   // 一覧取得
   getTodo();
@@ -78,13 +119,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 更新
     else if (classList.contains("finish")) {
-      alert("更新");
       updateTodo(id);
     }
 
     // 削除
     else if (classList.contains("delete")) {
-      alert("削除");
       deleteTodo(id);
     }
   });
