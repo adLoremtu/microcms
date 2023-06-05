@@ -3,10 +3,11 @@ import { getTodoThenFunction } from "./getTodoThenFunction";
 // =======================
 // === microCMS初期設定 ===
 // =======================
+// サービスIDとAPIキーはみなさんが所有するIDとキーを設定してください。
 import { createClient } from "microcms-js-sdk";
 const client = createClient({
-  serviceDomain: "todo-application", // サービスID
-  apiKey: "E4MyAB1gflcNC7UcNqbbOKwHPkieSBfQbClj", // APIキー
+  serviceDomain: "SERVICE_ID", // サービスID
+  apiKey: "API_KEY", // APIキー
 });
 
 // =======================
